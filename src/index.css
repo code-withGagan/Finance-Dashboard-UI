@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen;
+  }
+  
+  #root {
+    @apply min-h-screen;
+  }
+}
+
+@layer components {
+  .dashboard-card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+  
+  .btn {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply btn bg-blue-600 dark:bg-blue-500 hover:bg-blue-700 dark:hover:bg-blue-600 text-white focus:ring-blue-500;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-gray-100 focus:ring-gray-500;
+  }
+  
+  .btn-danger {
+    @apply btn bg-red-500 hover:bg-red-600 text-white focus:ring-red-500;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    @apply text-3xl font-bold text-emerald-600 dark:text-emerald-400;
+  }
+  
+  .text-income {
+    @apply text-emerald-600 dark:text-emerald-400;
+  }
+  
+  .text-expense {
+    @apply text-red-600 dark:text-red-400;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+/* Dark mode toggle button styles */
+.theme-toggle {
+  @apply w-12 h-12 rounded-full p-1 flex items-center justify-center bg-gray-200 dark:bg-gray-700;
+}
+
+.theme-toggle svg {
+  @apply w-5 h-5 text-gray-900 dark:text-gray-100;
+}

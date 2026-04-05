@@ -1,0 +1,1 @@
+# TODO: Fix CATEGORIES Export Error\n\n## Plan Steps:\n1. [x] Confirm plan with user\n2. [ ] Edit TransactionForm.jsx to fix import path\n3. [ ] Test the fix (refresh app, check console, verify dropdown)\n4. [ ] Complete task\n
